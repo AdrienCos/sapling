@@ -1,8 +1,8 @@
 # Sapling
 
-![GitHub](https://img.shields.io/github/license/AdrienCos/adriencos_sapling)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/adriencos_sapling)
-![GitHub tag (with filter)](https://img.shields.io/github/v/tag/AdrienCos/adriencos_sapling)
+![GitHub](https://img.shields.io/github/license/AdrienCos/sapling)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sapling)
+![GitHub tag (with filter)](https://img.shields.io/github/v/tag/AdrienCos/sapling)
 ![PDM](https://img.shields.io/badge/pdm-managed-blueviolet)
 ![Black](https://img.shields.io/badge/code_style-black-000000)
 ![Isort](https://img.shields.io/badge/imports-isort-1674b1?labelColor=ef8336)
