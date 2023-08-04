@@ -1,4 +1,4 @@
-"""Top-level package for sapling.
+"""Top-level package for adriencos_sapling.
 
 .. include:: ../../README.md
 """

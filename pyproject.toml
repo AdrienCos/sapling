@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "setuptools_scm[toml]>=7.1", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sapling"
+name = "adriencos_sapling"
 authors = [{ name = "Adrien Cosson", email = "adrien@cosson.io" }]
 description = "Sapling"
 readme = "README.md"
@@ -31,7 +31,7 @@ Repository = "https://github.com/AdrienCos/sapling"
 Issues = "https://github.com/AdrienCos/sapling/issues"
 
 [project.scripts]
-sapling = "sapling.cli:main"
+adriencos_sapling = "adriencos_sapling.cli:main"
 
 [tool.setuptools_scm]
 fallback_version = "0.0.1"
@@ -48,7 +48,7 @@ profile = "black"
 
 [tool.coverage.run]
 branch = true
-source = ["sapling"]
+source = ["adriencos_sapling"]
 parallel = true
 
 [tool.coverage.paths]
@@ -85,7 +85,7 @@ line-length = 100
 convention = "google"
 
 [tool.ruff.isort]
-known-first-party = ["sapling"]
+known-first-party = ["adriencos_sapling"]
 
 [tool.pdm.scripts]
 # Common configuration
@@ -207,7 +207,7 @@ _build_pex = { cmd = [
     "--pex-args",
     "--requirement=requirements.txt",
 ], help = "Build a PEX file of the package" }
-_build_docker_image = { shell = "docker build -t sapling:latest -t sapling:${PACKAGE_VERSION} ." }
+_build_docker_image = { shell = "docker build -t adriencos_sapling:latest -t adriencos_sapling:${PACKAGE_VERSION} ." }
 _build_wheel = { cmd = [
     "pdm",
     "build",

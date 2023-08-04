@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 from click.testing import CliRunner
 
-from sapling.cli import main
+from adriencos_sapling.cli import main
 
 
 class TestCLI:
@@ -11,7 +11,7 @@ class TestCLI:
         runner = CliRunner()
 
         # When
-        with patch("sapling.cli.ExampleClass", autospec=True) as mock_module:
+        with patch("adriencos_sapling.cli.ExampleClass", autospec=True) as mock_module:
             result = runner.invoke(main, args=None)
 
         # Then
@@ -23,7 +23,7 @@ class TestCLI:
         runner = CliRunner()
 
         # When
-        with patch("sapling.cli.ExampleClass", autospec=True) as mock_module:
+        with patch("adriencos_sapling.cli.ExampleClass", autospec=True) as mock_module:
             result = runner.invoke(main, args=["--iterations", "10"])
 
         # Then

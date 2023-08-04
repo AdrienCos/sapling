@@ -4,7 +4,7 @@ _src_path: gh:AdrienCos/seedlings
 author_email: adrien@cosson.io
 author_name: Adrien Cosson
 author_username: AdrienCos
-package_name: sapling
+package_name: adriencos_sapling
 project_name: Sapling
 repository_url: https://github.com/AdrienCos/sapling
 short_description: A Python project based on the Seedlings template

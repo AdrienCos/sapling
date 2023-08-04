@@ -1,8 +1,8 @@
-"""Tests for `sapling` package."""
+"""Tests for `adriencos_sapling` package."""
 
 import pytest
 
-from sapling.example_module import ExampleClass
+from adriencos_sapling.example_module import ExampleClass
 
 
 @pytest.fixture

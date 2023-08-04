@@ -1,8 +1,8 @@
 # Sapling
 
-![GitHub](https://img.shields.io/github/license/AdrienCos/sapling)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sapling)
-![GitHub tag (with filter)](https://img.shields.io/github/v/tag/AdrienCos/sapling)
+![GitHub](https://img.shields.io/github/license/AdrienCos/adriencos_sapling)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/adriencos_sapling)
+![GitHub tag (with filter)](https://img.shields.io/github/v/tag/AdrienCos/adriencos_sapling)
 ![PDM](https://img.shields.io/badge/pdm-managed-blueviolet)
 ![Black](https://img.shields.io/badge/code_style-black-000000)
 ![Isort](https://img.shields.io/badge/imports-isort-1674b1?labelColor=ef8336)
@@ -42,22 +42,22 @@ this package.
   [pypi.org](https://pypi.org)), then you can simply run:
 
 ```sh
-pipx install sapling
+pipx install adriencos_sapling
 ```
 
 - If you want to install it directly from the repository:
 
 ```sh
-pipx install git+https://github.com/Adrien Cosson/sapling
+pipx install git+https://github.com/Adrien Cosson/adriencos_sapling
 ```
 
 - If you downloaded a `.whl` or `.tar.gz` archive from the releases:
 
 ```sh
 # Prebuilt wheel
-pipx install sapling-${VERSION}-py3-none-any.whl
+pipx install adriencos_sapling-${VERSION}-py3-none-any.whl
 # Tarball
-pipx install sapling-${VERSION}.tar.gz
+pipx install adriencos_sapling-${VERSION}.tar.gz
 ```
 
 where `$VERSION` is the version of the package you downloaded.
@@ -68,7 +68,7 @@ where `$VERSION` is the version of the package you downloaded.
 virtualenv format, that can be executed on any machine that provides a suitable
 Python interpreter.
 
-To install the CLI provided by `sapling`, download the `.pex` files
+To install the CLI provided by `adriencos_sapling`, download the `.pex` files
 of the latest release, and copy them somewhere in your `$PATH` (on Linux,
 `~/.local/bin` is often a good idea). The executables will then be available in
 your shell.
@@ -87,7 +87,7 @@ this repository.
 
 Make sure you have a virtualenv activated to install this package.
 
-You can then enter the project directory (with `cd sapling/`), and
+You can then enter the project directory (with `cd adriencos_sapling/`), and
 install the project with:
 
 ``` sh

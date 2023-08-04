@@ -10,7 +10,7 @@ RUN addgroup --system app_group && \
     app_user
 
 # Copy the built Python archive
-COPY ./dist/sapling*.whl /app/
+COPY ./dist/adriencos_sapling*.whl /app/
 # Copy the pinned requirements
 COPY ./requirements.txt /app/
 
@@ -25,7 +25,7 @@ RUN pip install --user --no-cache-dir --requirement ./requirements.txt
 # file contains package hashes, and the .whl does not
 # See: https://github.com/pypa/pip/issues/4344
 # hadolint ignore=DL3059
-RUN pip install --user --no-cache-dir ./sapling*.whl
+RUN pip install --user --no-cache-dir ./adriencos_sapling*.whl
 
 # Set the entrypoint as the package
-ENTRYPOINT [ "sapling" ]
+ENTRYPOINT [ "adriencos_sapling" ]

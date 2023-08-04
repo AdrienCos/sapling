@@ -1,4 +1,4 @@
-"""Console script for sapling."""
+"""Console script for adriencos_sapling."""
 
 # Standard lib imports
 import sys
@@ -8,7 +8,7 @@ import click
 from loguru import logger
 
 # Local package imports
-from sapling.example_module import ExampleClass
+from adriencos_sapling.example_module import ExampleClass
 
 
 # Define this function as a the main command entrypoint
@@ -35,7 +35,7 @@ def main(
     iterations: int,
     verbose: int,
 ) -> None:
-    """Console script for sapling."""
+    """Console script for adriencos_sapling."""
     # Set the log level if required
     if verbose == 0:
         logger.remove()
