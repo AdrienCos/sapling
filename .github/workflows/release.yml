@@ -52,7 +52,6 @@ jobs:
       - name: Build the Pex executables
         run: pdm publish
         env:
-          PDM_PUBLISH_REPO: testpypi
           PDM_PUBLISH_PASSWORD: ${{ secrets.PYPI_TOKEN }}
 
   create_release:
