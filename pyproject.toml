@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68", "setuptools_scm[toml]>=7.1", "wheel"]
+requires = ["setuptools>=69", "setuptools_scm[toml]>=8.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -14,16 +14,13 @@ keywords = []
 classifiers = [
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
 ]
-dependencies = [
-    "Click>=8.1.7",
-    "loguru>=0.7.2",
-]
+dependencies = ["Click~=8.1", "loguru~=0.7"]
 dynamic = ["version"]
 
 
@@ -39,15 +36,19 @@ adriencos_sapling = "adriencos_sapling.cli:main"
 [tool.setuptools_scm]
 fallback_version = "0.0.1"
 
-[tool.mypy]
-warn_return_any = true
-warn_unused_configs = true
-disallow_untyped_defs = true
-disallow_untyped_calls = true
-ignore_missing_imports = false
+[tool.pyright]
+include = ["src", "tests"]
+pythonVersion = "3.12"
+pythonPlatform = "Linux"
+typeCheckingMode = "strict"
+venv = ".venv"
+
+[tool.black]
+line-length = 100
 
 [tool.isort]
 profile = "black"
+line_length = 100
 
 [tool.coverage.run]
 branch = true
@@ -90,6 +91,9 @@ convention = "google"
 [tool.ruff.isort]
 known-first-party = ["adriencos_sapling"]
 
+[tool.typos.default]
+extend-ignore-re = ["_commit:.*"]
+
 [tool.pdm.scripts]
 # Common configuration
 _.env_file = ".version.env"
@@ -125,10 +129,9 @@ _ruff_check = { cmd = [
     "./src",
     "tests/",
 ], help = "Check the overall code" }
-_mypy_check = { cmd = [
-    "mypy",
-    "src/",
-    "tests/",
+_pyright_check = { cmd = [
+    "pyright",
+    "--warnings",
 ], help = "Check the typing of the code" }
 _typos_check = { cmd = [
     "typos",
@@ -139,6 +142,11 @@ _typos_fix = { cmd = [
     "--write-changes",
     ".",
 ], help = "Fix any typo found in the project" }
+_lockfile_check = { cmd = [
+    "pdm",
+    "lock",
+    "--check",
+], help = "Check that the lockfile is up-to-date" }
 _pytest = { cmd = ["pytest"], help = "Run the test suite" }
 _coverage_run = { cmd = [
     "coverage",
@@ -210,7 +218,7 @@ _build_pex = { cmd = [
     "--pex-args",
     "--requirement=requirements.txt",
 ], help = "Build a PEX file of the package" }
-_build_docker_image = { shell = "docker build -t adriencos_sapling:latest -t adriencos_sapling:${PACKAGE_VERSION} ." }
+_build_docker_image = { shell = "docker build -t adriencos_sapling:dev -t adriencos_sapling:${PACKAGE_VERSION} ." }
 _build_wheel = { cmd = [
     "pdm",
     "build",
@@ -228,9 +236,10 @@ spell = { composite = [
 lint = { composite = [
     "_black_check",
     "_isort_check",
-    "_mypy_check",
+    "_pyright_check",
     "_ruff_check",
     "_typos_check",
+    "_lockfile_check",
 ], help = "Lint the codebase" }
 test = { composite = ["_pytest"], help = "Run the test suite" }
 coverage = { composite = [
@@ -250,22 +259,21 @@ dev-update = { composite = [
     "_dev_packages_update",
 ], help = "Update the development dependencies and tools" }
 clean = { cmd = [
-    "git",
-    "clean",
-    "--force",
-    # Allow the deletion of ignored files
-    "-x",
-    # Allow the deletion of directories
-    "-d",
-    "--exclude",
-    ".venv/",
-    "--exclude",
-    ".pdm-python",
-], help = "Delete all the caches and build artifacts" }
-docker-build = { composite = [
-    "_generate_version",
+    "pyclean",
+    "--debris",
+    "all",
+    "--erase",
+    ".version.env",
+    "--yes",
+    "--",
+    ".",
+], help = "Delete all the files not tracked by Git, restores those tracked" }
+ci-prebuild = { composite = [
     "_generate_requirements",
     "_build_wheel",
+], help = "Build the artifacts to allow the build CI to generate a Docker image" }
+docker-build = { composite = [
+    "_generate_version",
     "_build_docker_image",
 ], help = "Build a Docker image of the application" }
 pex-build = { composite = [
@@ -291,19 +299,20 @@ template-check = { cmd = [
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "pytest>=7.4.3",
-    "black>=23.11.0",
-    "isort>=5.12.0",
-    "ruff>=0.1.5",
-    "mypy>=1.7.0",
-    "coverage>=7.3.2",
-    "toml>=0.10.2",
-    "rope>=1.11.0",
-    "pre-commit>=3.5.0",
-    "tox>=4.11.3",
-    "tox-pdm>=0.7.0",
-    "setuptools-scm>=8.0.4",
-    "pex>=2.1.155",
-    "typos>=1.16.23",
-    "copier>=9.0.1",
+    "black~=23.12",
+    "copier~=9.1",
+    "coverage~=7.4",
+    "isort~=5.13",
+    "pex~=2.1",
+    "pre-commit~=3.6",
+    "pyclean~=2.7",
+    "pyright~=1.1",
+    "pytest~=7.4",
+    "rope~=1.11",
+    "ruff~=0.1",
+    "setuptools-scm~=8.0",
+    "toml~=0.10",
+    "tox-pdm~=0.7",
+    "tox~=4.11",
+    "typos~=1.16",
 ]

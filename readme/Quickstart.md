@@ -1,8 +1,7 @@
 # Quickstart
 
 This file provides a quick documentation of the most useful features of this
-template. For more detailed documentation, see the [Deep Dive
-documentation](./Deep-dive.md).
+template.
 
 - [How do I...?](#how-do-i)
   - [...setup my development environment?](#setup-my-development-environment)
@@ -104,7 +103,7 @@ It will run `typos` on the entire project, and fix any typo it finds.
 
 `pdm lint`
 
-This will call various linters (`black`, `isort`, `ruff`, `mypy`, `typos`), and
+This will call various linters (`black`, `isort`, `ruff`, `pyright`, `typos`), and
 tell you if your code passes them.
 
 ### ...generate test coverage?
@@ -183,9 +182,8 @@ publish`](https://pdm.fming.dev/latest/usage/publish/)
 
 `pdm clean`
 
-This will use `git` to find and delete any untracked file (except for some
-useful files that should be persisted, but not tracked by `git`, such as
-`.pdm-python` or `./venv/`).
+This will use `pyclean` to find and delete the binary python files, the various
+cache directories, and the `dist/` directory.
 
 ### ...update the project to the latest version of the template?
 
