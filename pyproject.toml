@@ -7,7 +7,7 @@ name = "adriencos_sapling"
 authors = [{ name = "Adrien Cosson", email = "adrien@cosson.io" }]
 description = "Sapling"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9,<3.13"
 license = { text = "MIT" }
 keywords = []
 
@@ -303,7 +303,7 @@ dev = [
     "tox>=4.11.3",
     "tox-pdm>=0.7.0",
     "setuptools-scm>=8.0.4",
-    "pex>=2.0.3",
+    "pex>=2.1.155",
     "typos>=1.16.23",
     "copier>=9.0.1",
 ]
