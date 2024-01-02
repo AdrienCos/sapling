@@ -45,7 +45,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/common
       - name: Download the Python dist
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist/
@@ -61,12 +61,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Download the Python dist
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist/
       - name: Download the Pex executables
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: pex
           path: pex/
