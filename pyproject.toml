@@ -299,7 +299,7 @@ template-check = { cmd = [
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "black~=23.12",
+    "black~=24.1",
     "copier~=9.1",
     "coverage~=7.4",
     "isort~=5.13",
