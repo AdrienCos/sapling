@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=69", "setuptools_scm[toml]>=8.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 [project]
 name = "adriencos_sapling"
@@ -20,12 +20,11 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
 ]
-dependencies = [
-    "Click==8.1.7",
-    "loguru==0.7.2",
-]
+dependencies = ["Click==8.1.7", "loguru==0.7.2"]
 dynamic = ["version"]
 
+[tool.pdm.version]
+source = "scm"
 
 [project.urls]
 Homepage = "https://github.com/AdrienCos/sapling"
@@ -196,7 +195,7 @@ _dev_packages_update = { cmd = [
     # Only touch the dev packages
     "--dev",
 ], help = "Update the dev packages to their latest version" }
-_generate_version = { shell = "echo PACKAGE_VERSION=$(python -m setuptools_scm) | sed 's/+/./' > .version.env", help = "Export the package's version number to .version.env" }
+_generate_version = { shell = "echo PACKAGE_VERSION=$(pdm show --version) | sed 's/+/./' > .version.env", help = "Export the package's version number to .version.env" }
 _generate_requirements = { cmd = [
     "pdm",
     "export",
@@ -224,7 +223,7 @@ _build_pex = { cmd = [
     "--pex-args",
     "--requirement=requirements.txt",
 ], help = "Build a PEX file of the package" }
-_build_docker_image = { shell = "docker build -t adriencos_sapling:dev -t adriencos_sapling:${PACKAGE_VERSION} ." }
+_build_docker_image = { shell = "docker buildx build --build-arg=APP_VERSION=$(pdm show --version) -t adriencos_sapling:dev -t adriencos_sapling:${PACKAGE_VERSION} ." }
 _build_wheel = { cmd = [
     "pdm",
     "build",
