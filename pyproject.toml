@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=73", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 [project]
 name = "adriencos_sapling"
@@ -22,6 +22,8 @@ classifiers = [
 ]
 dependencies = ["Click==8.1.8", "loguru==0.7.3"]
 
+[tool.pdm.version]
+source = "scm"
 
 [project.urls]
 Homepage = "https://github.com/AdrienCos/sapling"
