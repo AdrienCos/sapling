@@ -23,6 +23,8 @@ classifiers = [
 ]
 dependencies = ["Click==8.3.1", "loguru==0.7.3"]
 
+[tool.pdm.version]
+source = "scm"
 
 [project.urls]
 Homepage = "https://github.com/AdrienCos/sapling"
