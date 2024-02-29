@@ -309,7 +309,7 @@ dev = [
     "copier==9.1.1",
     "coverage==7.4.3",
     "isort==5.13.2",
-    "pex==2.2.1",
+    "pex==2.2.2",
     "pre-commit==3.6.2",
     "pyclean==2.7.6",
     "pyright==1.1.351",
