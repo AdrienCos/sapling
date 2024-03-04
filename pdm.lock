@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:81b3041822390cc98d8ba0d5b0d979c1ddf92c12376df38af47fa974d07bd523"
+content_hash = "sha256:84b09ba56d8470f7b56b924c670ba58fb7b2901ff80e4dec7f860536fc7fb332"
 
 [[package]]
 name = "annotated-types"
@@ -513,12 +513,13 @@ files = [
 
 [[package]]
 name = "pyclean"
-version = "2.7.6"
+version = "3.0.0"
+requires_python = ">=3.5"
 summary = "Pure Python cross-platform pyclean. Clean up your Python bytecode."
 groups = ["dev"]
 files = [
-    {file = "pyclean-2.7.6-py3-none-any.whl", hash = "sha256:db5f74f6d2fedb79366e3260b260f5ab0053e1df28af14fc2c860800bf00fe96"},
-    {file = "pyclean-2.7.6.tar.gz", hash = "sha256:cde95ad4fbc194e970fd7ad009e82718f6c1d1309b195be9018d334d79661cca"},
+    {file = "pyclean-3.0.0-py3-none-any.whl", hash = "sha256:a1d8114991cf09994bc511cd0b050f3e398ae2bc8bfc0bbd1bdbec8ba048e6dd"},
+    {file = "pyclean-3.0.0.tar.gz", hash = "sha256:a48be7afd512b1923a7b9decc1219bbbe2d73199c939b46c936448f904a180ce"},
 ]
 
 [[package]]
