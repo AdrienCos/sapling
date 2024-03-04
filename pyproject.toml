@@ -311,7 +311,7 @@ dev = [
     "isort==5.13.2",
     "pex==2.2.2",
     "pre-commit==3.6.2",
-    "pyclean==2.7.6",
+    "pyclean==3.0.0",
     "pyright==1.1.352",
     "pytest==8.1.0",
     "rope==1.12.0",
