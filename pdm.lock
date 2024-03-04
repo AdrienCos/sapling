@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:2ff2effc42d56f992d429054791475e2842930903f8c992e3558d88ff92a4995"
+content_hash = "sha256:109439a23a41859b0296936ad8653a79645ceea7b24ba9293011e376444aba7f"
 
 [[package]]
 name = "annotated-types"
@@ -658,7 +658,7 @@ files = [
 
 [[package]]
 name = "pyright"
-version = "1.1.351"
+version = "1.1.352"
 requires_python = ">=3.7"
 summary = "Command line wrapper for pyright"
 groups = ["dev"]
@@ -666,8 +666,8 @@ dependencies = [
     "nodeenv>=1.6.0",
 ]
 files = [
-    {file = "pyright-1.1.351-py3-none-any.whl", hash = "sha256:83b44b25396ae20661fc5f133c3fce30928ff1296d4f2e5ff0bca5fcf03eb89d"},
-    {file = "pyright-1.1.351.tar.gz", hash = "sha256:01124099714eebd7f6525d8cbfa350626b56dfaf771cfcd55c03e69f0f1efbbd"},
+    {file = "pyright-1.1.352-py3-none-any.whl", hash = "sha256:0040cf173c6a60704e553bfd129dfe54de59cc76d0b2b80f77cfab4f50701d64"},
+    {file = "pyright-1.1.352.tar.gz", hash = "sha256:a621c0dfbcf1291b3610641a07380fefaa1d0e182890a1b2a7f13b446e8109a9"},
 ]
 
 [[package]]
