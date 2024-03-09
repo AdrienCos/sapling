@@ -3,6 +3,10 @@
   "extends": [
     "config:recommended"
   ],
+  "repositories": [
+    "AdrienCos/sapling"
+  ],
+  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "lockFileMaintenance": {
