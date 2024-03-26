@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:4aab8c598bfdf74d9a1b21e5d3d0197b141f60f3f2cfc865953ada1ec82476f0"
+content_hash = "sha256:1c8ab14198055479758b5c61198d698e74690d0de92a180981579ae30a14b7d2"
 
 [[package]]
 name = "annotated-types"
@@ -810,7 +810,7 @@ files = [
 
 [[package]]
 name = "rope"
-version = "1.12.0"
+version = "1.13.0"
 requires_python = ">=3.8"
 summary = "a python refactoring library..."
 groups = ["dev"]
@@ -818,8 +818,8 @@ dependencies = [
     "pytoolconfig[global]>=1.2.2",
 ]
 files = [
-    {file = "rope-1.12.0-py3-none-any.whl", hash = "sha256:01f06624159e6b2ec9b94412d519e8877a19eeabe392f469c36f7236df05d443"},
-    {file = "rope-1.12.0.tar.gz", hash = "sha256:93a1bb991fbf0426e8d415102d1c092ccc42e826ce9a42c4d61ce53d7786d9d9"},
+    {file = "rope-1.13.0-py3-none-any.whl", hash = "sha256:b435a0c0971244fdcd8741676a9fae697ae614c20cc36003678a7782f25c0d6c"},
+    {file = "rope-1.13.0.tar.gz", hash = "sha256:51437d2decc8806cd5e9dd1fd9c1306a6d9075ecaf78d191af85fc1dfface880"},
 ]
 
 [[package]]
