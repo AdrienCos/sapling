@@ -53,6 +53,13 @@
       ],
       "groupName": "pyright",
       "additionalBranchPrefix": ""
+    },
+    {
+      "matchPackagePatterns": [
+        "pdm"
+      ],
+      "groupName": "pdm",
+      "additionalBranchPrefix": ""
     }
   ],
   "customManagers": [
@@ -66,6 +73,17 @@
       ],
       "depNameTemplate": "python",
       "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "ARG PDM_VERSION=(?<currentValue>.*?)\\n"
+      ],
+      "depNameTemplate": "pdm",
+      "datasourceTemplate": "pypi"
     }
   ]
 }
