@@ -54,5 +54,18 @@
       "groupName": "pyright",
       "additionalBranchPrefix": ""
     }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "ARG PYTHON_VERSION=(?<currentValue>.*?)\\n"
+      ],
+      "depNameTemplate": "python",
+      "datasourceTemplate": "docker"
+    }
   ]
 }
