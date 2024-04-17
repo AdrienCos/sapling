@@ -69,17 +69,6 @@
         "^Dockerfile$"
       ],
       "matchStrings": [
-        "ARG PYTHON_VERSION=(?<currentValue>.*?)\\n"
-      ],
-      "depNameTemplate": "python",
-      "datasourceTemplate": "docker"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "^Dockerfile$"
-      ],
-      "matchStrings": [
         "ARG PDM_VERSION=(?<currentValue>.*?)\\n"
       ],
       "depNameTemplate": "pdm",
