@@ -25,6 +25,34 @@
       ],
       "groupName": "typos",
       "additionalBranchPrefix": ""
+    },
+    {
+      "matchPackagePatterns": [
+        "isort"
+      ],
+      "groupName": "isort",
+      "additionalBranchPrefix": ""
+    },
+    {
+      "matchPackagePatterns": [
+        "black"
+      ],
+      "groupName": "black",
+      "additionalBranchPrefix": ""
+    },
+    {
+      "matchPackagePatterns": [
+        "ruff"
+      ],
+      "groupName": "ruff",
+      "additionalBranchPrefix": ""
+    },
+    {
+      "matchPackagePatterns": [
+        "pyright"
+      ],
+      "groupName": "pyright",
+      "additionalBranchPrefix": ""
     }
   ]
 }
