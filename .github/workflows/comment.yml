@@ -1,0 +1,50 @@
+---
+on:
+  pull_request:
+    # types: [opened]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            function getTestenvName(repoName, branchName) {
+              const sanitizedBranchName = branchName.toLowerCase().replace('/', '-');
+              const concatenatedName = `${repoName}-${sanitizedBranchName}`;
+              const trimmedName = concatenatedName.substring(0, 35);
+              return trimmedName.replace('_', '-').replace('.', '-').replace(/\/$/, "");
+            }
+            function getJenkinsBranchUrl(repoName, branchName) {
+              const branchNameEncoded = encodeURIComponent(branchName);
+              return `https://jenkins.com/jenkins/job/AdrienCos/job/${repoName}/job/${branchNameEncoded}/`;
+            }
+
+            const repoName = context.payload.repository.name;
+            const branchName = context.payload.pull_request.head.ref;
+            const testenvName = getTestenvName(repoName, branchName);
+            console.log(testenvName);
+
+            const jenkinsBranchUrl = getJenkinsBranchUrl(repoName, branchName);
+            console.log(jenkinsBranchUrl);
+
+            const firstIngress = `https://${testenvName}-first-ingress.cosson.io`;
+            const secondIngress = `https://${testenvName}-second-ingress.cosson.io`;
+            const thirdIngress = `https://${testenvName}-third-ingress.cosson.io`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `
+            # TestEnv Information
+            Name: ${testenvName}
+            Jenkins Build Link: ${jenkinsBranchUrl}
+            Ingresses:
+
+            - [First Ingress](${firstIngress})
+            - [Second Ingress](${secondIngress})
+            - [Third Ingress](${thirdIngress})
+            `
+            });
