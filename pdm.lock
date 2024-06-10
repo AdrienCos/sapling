@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:10474ba777877d0a1228cb88d315d96782d8cbb35ea30e498e4b30b76fa53ff0"
+content_hash = "sha256:17562e45c29a9c53045b0d420349c7bef1cdf9685bec236b5d00e88ec8ab5d70"
 
 [[package]]
 name = "annotated-types"
@@ -920,21 +920,21 @@ files = [
 
 [[package]]
 name = "typos"
-version = "1.22.3"
+version = "1.22.4"
 requires_python = ">=3.7"
 summary = "Source Code Spelling Correction"
 groups = ["dev"]
 files = [
-    {file = "typos-1.22.3-py3-none-macosx_10_12_x86_64.whl", hash = "sha256:079e996993ad949893b126fdece1cfe8f1caf824ffc603a6b800d983017af191"},
-    {file = "typos-1.22.3-py3-none-macosx_11_0_arm64.whl", hash = "sha256:46cf840244676e5b78742bd722a3ce42162b525a6dff5fa5ba97e5192f704a73"},
-    {file = "typos-1.22.3-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:7cee17f30c6f6a4e43921c6f5d0e6bb00dfdd2e0786ae823b6825d3baf21b59c"},
-    {file = "typos-1.22.3-py3-none-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:5623df5c03201ab6f096ced653ea0d863da37f80964280569c11356472db0d88"},
-    {file = "typos-1.22.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ef7f3648e04eb992e941418189e2be2002efcd57c28221c03bb0b8e728743600"},
-    {file = "typos-1.22.3-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:3ef1b4ba30623784cfce1a82fed822d90f5aed471432f621f68435d109360fab"},
-    {file = "typos-1.22.3-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:2b273e9a82de399fe7683f378dcbf2d5956dbbfa0a8cc5338df20e5ac99a1e83"},
-    {file = "typos-1.22.3-py3-none-win32.whl", hash = "sha256:e7f3f6e0bb29194ffe54ed98a61cb9574a8bd3e98b72b9c6d26dd31d0c2d689e"},
-    {file = "typos-1.22.3-py3-none-win_amd64.whl", hash = "sha256:7aa68221dcd9290ded8f53c1eccabe2e7f827a65534ea09a72d98b452eefb9bd"},
-    {file = "typos-1.22.3.tar.gz", hash = "sha256:ef444b5ed0d5608563760569d37b9db1dd82c7c0746a6d492441f6e8fc92d790"},
+    {file = "typos-1.22.4-py3-none-macosx_10_12_x86_64.whl", hash = "sha256:a1e35f0ec977e78659d46379570ab018d32c0fdd3f192a44c982731982b693d8"},
+    {file = "typos-1.22.4-py3-none-macosx_11_0_arm64.whl", hash = "sha256:63e97187dd48123e781dd54c3be854c1af548d2e4c913c3dd92f451df1b25fbf"},
+    {file = "typos-1.22.4-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a7c3fdae08252b2d0b0b2c66d69fe4227e4b4a207b87133199386256480b195a"},
+    {file = "typos-1.22.4-py3-none-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e5adb76d07fe622160a00293a6b9a518e784fa58545e99a07b59398f305daec9"},
+    {file = "typos-1.22.4-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:79a9184ac60127b4830ded6f98b768154385a8b63a4ed93c48316694a0407946"},
+    {file = "typos-1.22.4-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:ac4090254fef67148fc084eabd10752b04cc2ecbaa5dc742b2db69362b3bc018"},
+    {file = "typos-1.22.4-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:6dec7abe907cd74393e9be5a28d568d439101108a0964f5dbe8030d7bcc5be92"},
+    {file = "typos-1.22.4-py3-none-win32.whl", hash = "sha256:0d6f23bef5ea3d1d76c5f1aa701b739c5cf4ad5e907803597d0afbc2cb090b90"},
+    {file = "typos-1.22.4-py3-none-win_amd64.whl", hash = "sha256:05ae63c11cdaa9883fa6f2d5864a9f31ca07f62d1652b16ad2a6c75a7c34b68c"},
+    {file = "typos-1.22.4.tar.gz", hash = "sha256:2a2880834960b89f516abc98f7ec5da427a297aec7566664c5e6726386f0bb85"},
 ]
 
 [[package]]
