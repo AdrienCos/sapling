@@ -307,7 +307,7 @@ template-check = { cmd = [
 dev = [
     "black==24.4.2",
     "copier==9.2.0",
-    "coverage==7.5.3",
+    "coverage==7.5.4",
     "isort==5.13.2",
     "pex==2.4.0",
     "pre-commit==3.7.1",
