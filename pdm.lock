@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:87d06a3e768904f0133e162dd0ce9f3797e6c18e0ac1dcc9da22c259ed93276c"
+content_hash = "sha256:13e3d961cc12ac9f902c27074a9108e54b3f1bd795c1f3f0993d043b92103c96"
 
 [[package]]
 name = "annotated-types"
@@ -431,13 +431,13 @@ files = [
 
 [[package]]
 name = "pex"
-version = "2.4.0"
-requires_python = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.13,>=2.7"
+version = "2.6.0"
+requires_python = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.14,>=2.7"
 summary = "The PEX packaging toolchain."
 groups = ["dev"]
 files = [
-    {file = "pex-2.4.0-py2.py3-none-any.whl", hash = "sha256:c5240d95d770f566f3db35c6d1fff063340605cb950dcd2fcdae3d9bc566d6b3"},
-    {file = "pex-2.4.0.tar.gz", hash = "sha256:587e9a92524ff169355e0c542de74cfeb22de97580579babf61380b5aed3b03e"},
+    {file = "pex-2.6.0-py2.py3-none-any.whl", hash = "sha256:b9efaa98e62827f323a99a6e5b0172d074777680a621987bfa3fca78ac0de67a"},
+    {file = "pex-2.6.0.tar.gz", hash = "sha256:ae257ffbf72cd9d09b0d0082393df3407338fa9f1ac1e2d61cad47d2f758cd6a"},
 ]
 
 [[package]]
