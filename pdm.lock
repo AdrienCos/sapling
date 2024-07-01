@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.2"
-content_hash = "sha256:7fb1035d3beb6c7b8e95ba7b663bf103fc49a80f233ef6f53e546b25267b624b"
+content_hash = "sha256:24cc9e691b266020eec083e5dbcb9bcc87fa163f3eb4072968cc94a20e52db6f"
 
 [[package]]
 name = "annotated-types"
@@ -114,17 +114,17 @@ files = [
 
 [[package]]
 name = "copier"
-version = "9.2.0"
+version = "9.3.0"
 requires_python = ">=3.8"
 summary = "A library for rendering project templates."
 groups = ["dev"]
 dependencies = [
     "colorama>=0.4.6",
-    "dunamai>=1.7.0; python_version < \"4\"",
-    "eval-type-backport<0.2.0,>=0.1.3; python_version < \"3.10\"",
+    "dunamai>=1.7.0",
+    "eval-type-backport<0.3.0,>=0.1.3; python_version < \"3.10\"",
     "funcy>=1.17",
     "jinja2-ansible-filters>=1.3.1",
-    "jinja2>=3.1.3",
+    "jinja2>=3.1.4",
     "packaging>=23.0",
     "pathspec>=0.9.0",
     "plumbum>=1.6.9",
@@ -134,8 +134,8 @@ dependencies = [
     "questionary>=1.8.1",
 ]
 files = [
-    {file = "copier-9.2.0-py3-none-any.whl", hash = "sha256:62682ce8cd78db1006feafe2c815d59d5069efa4c2009017f3c63780d977f6de"},
-    {file = "copier-9.2.0.tar.gz", hash = "sha256:4ed9012579923955d3fc61d049568907fabe6d9a47e5f871236c6aae0b7472f1"},
+    {file = "copier-9.3.0-py3-none-any.whl", hash = "sha256:76b63be3cd9c8ccab5c5d5aee974d8eb57ed0981ce6018985df2bb8ffb59b60f"},
+    {file = "copier-9.3.0.tar.gz", hash = "sha256:99adf780b1f044f94538bcd5f694850b11ed40957fd866ce2cb19ee2b4e82dca"},
 ]
 
 [[package]]
@@ -205,7 +205,6 @@ version = "1.21.2"
 requires_python = ">=3.5"
 summary = "Dynamic version generation"
 groups = ["dev"]
-marker = "python_version < \"4\""
 dependencies = [
     "packaging>=20.9",
 ]
@@ -216,14 +215,14 @@ files = [
 
 [[package]]
 name = "eval-type-backport"
-version = "0.1.3"
-requires_python = ">=3.7"
+version = "0.2.0"
+requires_python = ">=3.8"
 summary = "Like `typing._eval_type`, but lets older Python versions use newer typing features."
 groups = ["dev"]
 marker = "python_version < \"3.10\""
 files = [
-    {file = "eval_type_backport-0.1.3-py3-none-any.whl", hash = "sha256:519d2a993b3da286df9f90e17f503f66435106ad870cf26620c5720e2158ddf2"},
-    {file = "eval_type_backport-0.1.3.tar.gz", hash = "sha256:d83ee225331dfa009493cec1f3608a71550b515ee4749abe78da14e3c5e314f5"},
+    {file = "eval_type_backport-0.2.0-py3-none-any.whl", hash = "sha256:ac2f73d30d40c5a30a80b8739a789d6bb5e49fdffa66d7912667e2015d9c9933"},
+    {file = "eval_type_backport-0.2.0.tar.gz", hash = "sha256:68796cfbc7371ebf923f03bdf7bef415f3ec098aeced24e054b253a0e78f7b37"},
 ]
 
 [[package]]
