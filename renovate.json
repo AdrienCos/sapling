@@ -60,6 +60,15 @@
       ],
       "groupName": "pdm",
       "additionalBranchPrefix": ""
+    },
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
     }
   ],
   "customManagers": [
