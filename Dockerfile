@@ -1,7 +1,7 @@
 ARG PYTHON_VERSION=3.12.4-slim
 ARG PDM_VERSION=2.16.1
 
-FROM python:${PYTHON_VERSION}@sha256:bb8d596bd402f592fa7ff727e1868e52b2976b2ed545da25c9cf170df757181b as base
+FROM python:${PYTHON_VERSION}@sha256:0344c96b58434a82ca2ccab7bcafba919475572ff9c1fcfa68766f70fae16e26 as base
 RUN addgroup --system abc && \
     adduser \
     --shell /bin/sh \
