@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.2"
-content_hash = "sha256:3bf3a7d7e2bdec7aa9d700bc503524b44b5eac86ed6a0cbd6abebea7520520fc"
+content_hash = "sha256:9518f91ff30d81ca31e5f7e013e45dd603e8c25578bbd5e81fdbacb6a0ea2aba"
 
 [[package]]
 name = "annotated-types"
@@ -430,13 +430,13 @@ files = [
 
 [[package]]
 name = "pex"
-version = "2.8.0"
+version = "2.8.1"
 requires_python = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.14,>=2.7"
 summary = "The PEX packaging toolchain."
 groups = ["dev"]
 files = [
-    {file = "pex-2.8.0-py2.py3-none-any.whl", hash = "sha256:648520e52ecb312cef96e82843b13110d6929358ebea6490fc18b1f74eacb814"},
-    {file = "pex-2.8.0.tar.gz", hash = "sha256:1fd93a9016eba9349bfc79e8134a939cce26b1d2837aafed9a76f7304c58983a"},
+    {file = "pex-2.8.1-py2.py3-none-any.whl", hash = "sha256:c79e2b6b1ff47725395f4cc0d74846fc45b77d5bb0a162058320c6a57255401d"},
+    {file = "pex-2.8.1.tar.gz", hash = "sha256:71e7fa26626ffd0c9ab9f511ff449ed291583454215206eb85921ea7b06a1148"},
 ]
 
 [[package]]
