@@ -1,5 +1,5 @@
 ARG PYTHON_VERSION=3.12.4-slim
-ARG PDM_VERSION=2.17.1
+ARG PDM_VERSION=2.17.3
 
 FROM python:${PYTHON_VERSION}@sha256:a3e58f9399353be051735f09be0316bfdeab571a5c6a24fd78b92df85bcb2d85 as base
 RUN addgroup --system abc && \
