@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:e9e33afa5cdc6d6ae36f4e21254c39cd82bea3c84051b18e20472d50538ab474"
+content_hash = "sha256:9a0d9e3d9634c568c8161babd9e26fc651d06c5566ae44d4331ff72448e222f1"
 
 [[metadata.targets]]
 requires_python = ">=3.9,<3.13"
@@ -886,12 +886,12 @@ files = [
 
 [[package]]
 name = "tox"
-version = "4.16.0"
+version = "4.17.1"
 requires_python = ">=3.8"
 summary = "tox is a generic virtualenv management and test command line tool"
 groups = ["dev"]
 dependencies = [
-    "cachetools>=5.3.3",
+    "cachetools>=5.4",
     "chardet>=5.2",
     "colorama>=0.4.6",
     "filelock>=3.15.4",
@@ -903,8 +903,8 @@ dependencies = [
     "virtualenv>=20.26.3",
 ]
 files = [
-    {file = "tox-4.16.0-py3-none-any.whl", hash = "sha256:61e101061b977b46cf00093d4319438055290ad0009f84497a07bf2d2d7a06d0"},
-    {file = "tox-4.16.0.tar.gz", hash = "sha256:43499656f9949edb681c0f907f86fbfee98677af9919d8b11ae5ad77cb800748"},
+    {file = "tox-4.17.1-py3-none-any.whl", hash = "sha256:2974597c0353577126ab014f52d1a399fb761049e165ff34427f84e8cfe6c990"},
+    {file = "tox-4.17.1.tar.gz", hash = "sha256:2c41565a571e34480bd401d668a4899806169a4633e972ac296c54406d2ded8a"},
 ]
 
 [[package]]
