@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:58e2724a33e406693863d6108e5cb23be5212260cb06e16265780b6121ac7797"
+content_hash = "sha256:1647ce62b58af5c2e9bc677e5f8d6d2660a5bfe9fd761438182e324fdc0b8e24"
 
 [[metadata.targets]]
 requires_python = ">=3.9,<3.13"
@@ -209,7 +209,7 @@ files = [
 
 [[package]]
 name = "dunamai"
-version = "1.21.2"
+version = "1.22.0"
 requires_python = ">=3.5"
 summary = "Dynamic version generation"
 groups = ["dev"]
@@ -218,8 +218,8 @@ dependencies = [
     "packaging>=20.9",
 ]
 files = [
-    {file = "dunamai-1.21.2-py3-none-any.whl", hash = "sha256:87db76405bf9366f9b4925ff5bb1db191a9a1bd9f9693f81c4d3abb8298be6f0"},
-    {file = "dunamai-1.21.2.tar.gz", hash = "sha256:05827fb5f032f5596bfc944b23f613c147e676de118681f3bb1559533d8a65c4"},
+    {file = "dunamai-1.22.0-py3-none-any.whl", hash = "sha256:eab3894b31e145bd028a74b13491c57db01986a7510482c9b5fff3b4e53d77b7"},
+    {file = "dunamai-1.22.0.tar.gz", hash = "sha256:375a0b21309336f0d8b6bbaea3e038c36f462318c68795166e31f9873fdad676"},
 ]
 
 [[package]]
@@ -650,7 +650,7 @@ files = [
 
 [[package]]
 name = "pyright"
-version = "1.1.374"
+version = "1.1.375"
 requires_python = ">=3.7"
 summary = "Command line wrapper for pyright"
 groups = ["dev"]
@@ -659,8 +659,8 @@ dependencies = [
     "typing-extensions>=3.7; python_version < \"3.8\"",
 ]
 files = [
-    {file = "pyright-1.1.374-py3-none-any.whl", hash = "sha256:55752bcf7a3646d293cd76710a983b71e16f6128aab2d42468e6eb7e46c0a70d"},
-    {file = "pyright-1.1.374.tar.gz", hash = "sha256:d01b2daf864ba5e0362e56b844984865970d7204158e61eb685e2dab7804cb82"},
+    {file = "pyright-1.1.375-py3-none-any.whl", hash = "sha256:4c5e27eddeaee8b41cc3120736a1dda6ae120edf8523bb2446b6073a52f286e3"},
+    {file = "pyright-1.1.375.tar.gz", hash = "sha256:7765557b0d6782b2fadabff455da2014476404c9e9214f49977a4e49dec19a0f"},
 ]
 
 [[package]]
