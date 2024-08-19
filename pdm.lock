@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:cdc0c41d68f0e0abcdf0615ab1215216c5c1415e0c5c73d08974829ed6e2113f"
+content_hash = "sha256:5e5287c19bcba422bd19bfe4abe7269d59d0ee0b3497741b703ed961017e6c6a"
 
 [[metadata.targets]]
 requires_python = ">=3.9,<3.13"
@@ -62,13 +62,13 @@ files = [
 
 [[package]]
 name = "cachetools"
-version = "5.4.0"
+version = "5.5.0"
 requires_python = ">=3.7"
 summary = "Extensible memoizing collections and decorators"
 groups = ["dev"]
 files = [
-    {file = "cachetools-5.4.0-py3-none-any.whl", hash = "sha256:3ae3b49a3d5e28a77a0be2b37dbcb89005058959cb2323858c2657c4a8cab474"},
-    {file = "cachetools-5.4.0.tar.gz", hash = "sha256:b8adc2e7c07f105ced7bc56dbb6dfbe7c4a00acce20e2227b3f355be89bc6827"},
+    {file = "cachetools-5.5.0-py3-none-any.whl", hash = "sha256:02134e8439cdc2ffb62023ce1debca2944c3f289d66bb17ead3ab3dede74b292"},
+    {file = "cachetools-5.5.0.tar.gz", hash = "sha256:2cc24fb4cbe39633fb7badd9db9ca6295d766d9c2995f245725a46715d050f2a"},
 ]
 
 [[package]]
@@ -440,13 +440,13 @@ files = [
 
 [[package]]
 name = "pex"
-version = "2.16.1"
+version = "2.16.2"
 requires_python = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.14,>=2.7"
 summary = "The PEX packaging toolchain."
 groups = ["dev"]
 files = [
-    {file = "pex-2.16.1-py2.py3-none-any.whl", hash = "sha256:5812d0112dc6667609172ebe05ef6bb0b12ee0b9ff1d8adce7f9323b5a594b79"},
-    {file = "pex-2.16.1.tar.gz", hash = "sha256:a26aa30081d7c5abf7f828119f34a7b2306e9ac7c1af6556a900c0cbf1f19a7f"},
+    {file = "pex-2.16.2-py2.py3-none-any.whl", hash = "sha256:8610b5bf7731c98d871421ff21e769e8fcf42ea56aa4ac7f8a271f2405733f24"},
+    {file = "pex-2.16.2.tar.gz", hash = "sha256:feb2f1e9819a741915759fc221ee6119447acdfc3e0aaa5bbe5800c39fa10003"},
 ]
 
 [[package]]
@@ -835,13 +835,13 @@ files = [
 
 [[package]]
 name = "setuptools"
-version = "72.1.0"
+version = "72.2.0"
 requires_python = ">=3.8"
 summary = "Easily download, build, install, upgrade, and uninstall Python packages"
 groups = ["dev"]
 files = [
-    {file = "setuptools-72.1.0-py3-none-any.whl", hash = "sha256:5a03e1860cf56bb6ef48ce186b0e557fdba433237481a9a625176c2831be15d1"},
-    {file = "setuptools-72.1.0.tar.gz", hash = "sha256:8d243eff56d095e5817f796ede6ae32941278f542e0f941867cc05ae52b162ec"},
+    {file = "setuptools-72.2.0-py3-none-any.whl", hash = "sha256:f11dd94b7bae3a156a95ec151f24e4637fb4fa19c878e4d191bfb8b2d82728c4"},
+    {file = "setuptools-72.2.0.tar.gz", hash = "sha256:80aacbf633704e9c8bfa1d99fa5dd4dc59573efcf9e4042c13d3bcef91ac2ef9"},
 ]
 
 [[package]]
