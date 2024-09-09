@@ -19,7 +19,7 @@ repos:
     hooks:
       - id: hadolint-docker
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.13.0
+    rev: v0.14.0
     hooks:
       - id: markdownlint-cli2-docker
   - repo: https://github.com/crate-ci/typos
