@@ -310,7 +310,7 @@ dev = [
     "coverage==7.6.1",
     "isort==5.13.2",
     "pex==2.20.2",
-    "pre-commit==3.8.0",
+    "pre-commit==4.0.1",
     "pyclean==3.0.0",
     "pyright==1.1.383",
     "pytest==8.3.3",
