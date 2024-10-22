@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=69", "setuptools_scm[toml]>=8.0", "wheel"]
+requires = ["setuptools>=73", "setuptools_scm[toml]>=8.1", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -20,10 +20,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
 ]
-dependencies = [
-    "Click==8.1.7",
-    "loguru==0.7.2",
-]
+dependencies = ["Click==8.1.7", "loguru==0.7.2"]
 dynamic = ["version"]
 
 
@@ -273,11 +270,7 @@ clean = { cmd = [
     "--yes",
     "--",
     ".",
-], help = "Delete all the files not tracked by Git, restores those tracked" }
-ci-prebuild = { composite = [
-    "_generate_requirements",
-    "_build_wheel",
-], help = "Build the artifacts to allow the build CI to generate a Docker image" }
+], help = "Remove all the build artifacts, caches, and other debris" }
 docker-build = { composite = [
     "_generate_version",
     "_build_docker_image",
@@ -293,15 +286,8 @@ cross-test = { cmd = [
 template-update = { cmd = [
     "copier",
     "update",
-    '--conflict',
-    "inline",
+    '--skip-answered',
 ], help = "Update the project to the latest version of the template" }
-template-check = { cmd = [
-    "copier",
-    "update",
-    "--pretend",
-    "--defaults",
-], help = "Check if the project uses the latest version of the template" }
 
 [tool.pdm.dev-dependencies]
 dev = [
