@@ -23,46 +23,46 @@
   },
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        "typos"
-      ],
       "groupName": "typos",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "matchPackageNames": [
+        "/typos/"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "isort"
-      ],
       "groupName": "isort",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "matchPackageNames": [
+        "/isort/"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "black"
-      ],
       "groupName": "black",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "matchPackageNames": [
+        "/black/"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "ruff"
-      ],
       "groupName": "ruff",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "matchPackageNames": [
+        "/ruff/"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "pyright"
-      ],
       "groupName": "pyright",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "matchPackageNames": [
+        "/pyright/"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "pdm"
-      ],
       "groupName": "pdm",
-      "additionalBranchPrefix": ""
+      "additionalBranchPrefix": "",
+      "matchPackageNames": [
+        "/pdm/"
+      ]
     },
     {
       "matchUpdateTypes": [
