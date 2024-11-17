@@ -257,8 +257,6 @@ clean = { cmd = [
     "pyclean",
     "--debris",
     "all",
-    "--erase",
-    "--yes",
     "--",
     ".",
 ], help = "Remove all the build artifacts, caches, and other debris" }
