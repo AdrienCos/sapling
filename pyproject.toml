@@ -34,7 +34,7 @@ adriencos_sapling = "adriencos_sapling.cli:main"
 
 [tool.pyright]
 include = ["src", "tests"]
-pythonVersion = "3.12"
+pythonVersion = "3.13"
 pythonPlatform = "Linux"
 typeCheckingMode = "strict"
 venvPath = "."
