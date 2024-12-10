@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:b3f08850858e377b6d89ea53fb34a463a693ff132b085ec7b08f14474237d12c"
+content_hash = "sha256:fe4183ab2fe1cf2d9aeec287421831477e3ed5d1351d8a73b620865775a955e3"
 
 [[metadata.targets]]
 requires_python = ">=3.9,<3.14"
@@ -353,8 +353,8 @@ files = [
 
 [[package]]
 name = "loguru"
-version = "0.7.2"
-requires_python = ">=3.5"
+version = "0.7.3"
+requires_python = "<4.0,>=3.5"
 summary = "Python logging made (stupidly) simple"
 groups = ["default"]
 dependencies = [
@@ -363,8 +363,8 @@ dependencies = [
     "win32-setctime>=1.0.0; sys_platform == \"win32\"",
 ]
 files = [
-    {file = "loguru-0.7.2-py3-none-any.whl", hash = "sha256:003d71e3d3ed35f0f8984898359d65b79e5b21943f78af86aa5491210429b8eb"},
-    {file = "loguru-0.7.2.tar.gz", hash = "sha256:e671a53522515f34fd406340ee968cb9ecafbc4b36c679da03c18fd8d0bd51ac"},
+    {file = "loguru-0.7.3-py3-none-any.whl", hash = "sha256:31a33c10c8e1e10422bfd431aeb5d351c7cf7fa671e3c4df004162264b28220c"},
+    {file = "loguru-0.7.3.tar.gz", hash = "sha256:19480589e77d47b8d85b2c827ad95d49bf31b0dcde16593892eb51dd18706eb6"},
 ]
 
 [[package]]
@@ -1093,12 +1093,12 @@ files = [
 
 [[package]]
 name = "win32-setctime"
-version = "1.1.0"
+version = "1.2.0"
 requires_python = ">=3.5"
 summary = "A small Python utility to set file creation time on Windows"
 groups = ["default"]
 marker = "sys_platform == \"win32\""
 files = [
-    {file = "win32_setctime-1.1.0-py3-none-any.whl", hash = "sha256:231db239e959c2fe7eb1d7dc129f11172354f98361c4fa2d6d2d7e278baa8aad"},
-    {file = "win32_setctime-1.1.0.tar.gz", hash = "sha256:15cf5750465118d6929ae4de4eb46e8edae9a5634350c01ba582df868e932cb2"},
+    {file = "win32_setctime-1.2.0-py3-none-any.whl", hash = "sha256:95d644c4e708aba81dc3704a116d8cbc974d70b3bdb8be1d150e36be6e9d1390"},
+    {file = "win32_setctime-1.2.0.tar.gz", hash = "sha256:ae1fdf948f5640aae05c511ade119313fb6a30d7eabe25fef9764dca5873c4c0"},
 ]
