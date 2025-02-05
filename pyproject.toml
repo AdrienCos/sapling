@@ -277,7 +277,7 @@ template-update = { cmd = [
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "black==24.10.0",
+    "black==25.1.0",
     "copier==9.4.1",
     "coverage==7.6.10",
     "isort==6.0.0",
