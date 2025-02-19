@@ -1,0 +1,32 @@
+---
+name: Pull Request CI (lint, test, build artifacts)
+
+on:
+  pull_request:
+
+jobs:
+  pr-ci:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_COLOR: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: earthly/actions-setup@v1
+        with:
+          version: "latest"
+      - name: Compute short git SHA
+        run: |
+          echo "GITHUB_SHA_SHORT=$(git rev-parse --short ${{ github.event.pull_request.head.sha }})" >> $GITHUB_ENV
+      - name: GHCR.io login
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u AdrienCos --password-stdin
+      - name: Run the +docker step in Earthly
+        run: earthly --strict +all --tag=${{ env.GITHUB_SHA_SHORT }}
+      - name: Rename the Docker image
+        run: docker tag adriencos/sapling:${{ env.GITHUB_SHA_SHORT }} ghcr.io/adriencos/sapling:${{ env.GITHUB_SHA_SHORT }}
+      - name: Push the Docker image
+        run: docker push ghcr.io/adriencos/sapling:${{ env.GITHUB_SHA_SHORT }}
+      - name: Export the built package and Pex executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts
+          path: dist/
