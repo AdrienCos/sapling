@@ -284,7 +284,7 @@ dev = [
     "pex==2.33.2",
     "pre-commit==4.1.0",
     "pyclean==3.1.0",
-    "pyright==1.1.394",
+    "pyright==1.1.396",
     "pytest==8.3.5",
     "rope==1.13.0",
     "ruff==0.9.7",
