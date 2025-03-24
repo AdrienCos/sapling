@@ -279,7 +279,7 @@ template-update = { cmd = [
 dev = [
     "black==25.1.0",
     "copier==9.6.0",
-    "coverage==7.7.0",
+    "coverage==7.7.1",
     "isort==6.0.1",
     "pex==2.33.4",
     "pre-commit==4.1.0",
