@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:5e9e46d216d867b034b6051b51fc379736ba83cf9dc8d59f10ebb03306e30892"
+content_hash = "sha256:11a57e7a715131be23f846b23b332f8a8b5e5d421b0671c8ca287bf3287c45e9"
 
 [[metadata.targets]]
 requires_python = ">=3.9,<3.14"
@@ -125,7 +125,7 @@ files = [
 
 [[package]]
 name = "copier"
-version = "9.6.0"
+version = "9.7.1"
 requires_python = ">=3.9"
 summary = "A library for rendering project templates."
 groups = ["dev"]
@@ -144,10 +144,11 @@ dependencies = [
     "pygments>=2.7.1",
     "pyyaml>=5.3.1",
     "questionary>=1.8.1",
+    "typing-extensions<5.0.0,>=4.0.0; python_version < \"3.11\"",
 ]
 files = [
-    {file = "copier-9.6.0-py3-none-any.whl", hash = "sha256:aaf992600a373fa2dda9f61725916a230c210ede14a968c60dab855d524c6cf3"},
-    {file = "copier-9.6.0.tar.gz", hash = "sha256:e05a18b387b96e8d1fbd5271d37f59c9a02be5ad717f7878d0505562fd62b786"},
+    {file = "copier-9.7.1-py3-none-any.whl", hash = "sha256:89f2a3f3f9134af35a7d4e2aa63b6468dbff18d82c8369f995b126de9faf0f08"},
+    {file = "copier-9.7.1.tar.gz", hash = "sha256:83da2cbe5e28a1593c649f5dac37d916774b07a3ba3ce66e6966a3e84e557885"},
 ]
 
 [[package]]
