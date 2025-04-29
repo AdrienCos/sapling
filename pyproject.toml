@@ -288,7 +288,7 @@ dev = [
     "pytest==8.3.5",
     "rope==1.13.0",
     "ruff==0.11.7",
-    "setuptools-scm==8.2.0",
+    "setuptools-scm==8.3.1",
     "toml==0.10.2",
     "tox-pdm==0.7.2",
     "tox==4.25.0",
