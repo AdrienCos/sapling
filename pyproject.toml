@@ -7,17 +7,17 @@ name = "adriencos_sapling"
 authors = [{ name = "Adrien Cosson", email = "adrien@cosson.io" }]
 description = "Sapling"
 readme = "README.md"
-requires-python = ">=3.9,<3.14"
+requires-python = ">=3.10,<3.14"
 license = { text = "MIT" }
 keywords = []
 version = "1.5.0"
 classifiers = [
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: MIT License",
 ]
 dependencies = ["Click==8.1.8", "loguru==0.7.3"]
