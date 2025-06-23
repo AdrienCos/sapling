@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:2fef077d03d28f33dc5115c526977b0e5eeed832234f55f16a3ea01526b3df53"
+content_hash = "sha256:b28bba4172965b7fe30de16cee6677f1f81f57a910978d8614dea2d3970f6b6e"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.14"
@@ -456,13 +456,13 @@ files = [
 
 [[package]]
 name = "pex"
-version = "2.40.2"
+version = "2.40.3"
 requires_python = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,<3.14,>=2.7"
 summary = "The PEX packaging toolchain."
 groups = ["dev"]
 files = [
-    {file = "pex-2.40.2-py2.py3-none-any.whl", hash = "sha256:587a2f35c44efaa92d1de4e825bc80d222f339a73f4fab1d1f3c4cdf35a063d0"},
-    {file = "pex-2.40.2.tar.gz", hash = "sha256:e7cf40c75f293651519b5e275e7971f3e88f5998547a1b00386845c517b845df"},
+    {file = "pex-2.40.3-py2.py3-none-any.whl", hash = "sha256:d2356dceb8cb38721593e443bcc75a89ea0f61a340145d336cb44b5a4fa80182"},
+    {file = "pex-2.40.3.tar.gz", hash = "sha256:1beb2cc71a37b73654c48b03b1237aa286db34aca8e5c1ca0e116d867522687a"},
 ]
 
 [[package]]
