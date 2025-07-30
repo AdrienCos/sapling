@@ -19,6 +19,11 @@ RUN pip install --user --no-cache-dir pdm==${PDM_VERSION}
 COPY --chown=abc:abc ./pyproject.toml /app/
 COPY --chown=abc:abc ./pdm.lock /app/
 
+FROM base as base-pdm-bis
+ARG PDM_VERSION
+RUN pip install --user --no-cache-dir pdm==${PDM_VERSION}
+COPY --chown=abc:abc ./pyproject.toml /app/
+COPY --chown=abc:abc ./pdm.lock /app/
 
 
 FROM base-pdm as package-builder
