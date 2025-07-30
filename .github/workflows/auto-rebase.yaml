@@ -1,0 +1,22 @@
+---
+name: auto-rebase
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Get all the PRs to rebase
+        run: |
+          gh pr list
+            --state open
+            --label "gha:auto-rebase"
+            --json number --template '{{range .}}{{.number}} {{end}}'
+          | xargs -n1 -I _ gh pr update-branch --rebase _
