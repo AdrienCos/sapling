@@ -1,22 +1,26 @@
 ---
-name: auto-rebase
+name: Auto-rebase stale tagged PRs
 
 on:
   push:
     branches:
       - master
       - main
+  workflow_dispatch:
 
 jobs:
   main:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Get all the PRs to rebase
         run: |
-          gh pr list
-            --state open
-            --label "gha:auto-rebase"
-            --json number --template '{{range .}}{{.number}} {{end}}'
-          | xargs -n1 -I _ gh pr update-branch --rebase _
+          gh pr list \
+            --state open \
+            --label "gha:auto-rebase" \
+            --json number --template '{{range .}}{{.number}}{{"\n"}}{{end}}' \
+          | xargs -I _ gh pr update-branch --rebase _
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
