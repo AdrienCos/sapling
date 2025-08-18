@@ -13,7 +13,7 @@ jobs:
     name: Build the Python dist
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/common
       - name: Build the Python dist
         run: pdm build
@@ -27,7 +27,7 @@ jobs:
     name: Build the Pex executables
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/common
       - name: Build the Pex executables
         run: pdm pex-build
@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build_dist]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/common
       - name: Download the Python dist
         uses: actions/download-artifact@v5
@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build_dist, build_pex]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Download the Python dist
         uses: actions/download-artifact@v5
         with:
