@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:56cc8241cfce29ebb64026e351ff786285024bb7baa7238d075e8136b3e2ccee"
+content_hash = "sha256:5f9fd6d4e45adf47057b8efe62b65a10e1eb3d91e7f6a17d5ba39dd35a45f1a3"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.14"
@@ -678,7 +678,7 @@ files = [
 
 [[package]]
 name = "pyright"
-version = "1.1.403"
+version = "1.1.404"
 requires_python = ">=3.7"
 summary = "Command line wrapper for pyright"
 groups = ["dev"]
@@ -687,8 +687,8 @@ dependencies = [
     "typing-extensions>=4.1",
 ]
 files = [
-    {file = "pyright-1.1.403-py3-none-any.whl", hash = "sha256:c0eeca5aa76cbef3fcc271259bbd785753c7ad7bcac99a9162b4c4c7daed23b3"},
-    {file = "pyright-1.1.403.tar.gz", hash = "sha256:3ab69b9f41c67fb5bbb4d7a36243256f0d549ed3608678d381d5f51863921104"},
+    {file = "pyright-1.1.404-py3-none-any.whl", hash = "sha256:c7b7ff1fdb7219c643079e4c3e7d4125f0dafcc19d253b47e898d130ea426419"},
+    {file = "pyright-1.1.404.tar.gz", hash = "sha256:455e881a558ca6be9ecca0b30ce08aa78343ecc031d37a198ffa9a7a1abeb63e"},
 ]
 
 [[package]]
