@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:cf67724dc3e24fd3ac8b0889dcf421f506c42170c16886115198a86d56280707"
+content_hash = "sha256:05c77080b7f6a82bd2c1cac89ff19e258653336f4a2c84cca1b7b41c3a78c55c"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.14"
@@ -120,7 +120,7 @@ files = [
 
 [[package]]
 name = "copier"
-version = "9.9.1"
+version = "9.10.1"
 requires_python = ">=3.9"
 summary = "A library for rendering project templates."
 groups = ["dev"]
@@ -135,6 +135,7 @@ dependencies = [
     "pathspec>=0.9.0",
     "platformdirs>=4.3.6",
     "plumbum>=1.6.9",
+    "prompt-toolkit<3.0.52",
     "pydantic>=2.4.2",
     "pygments>=2.7.1",
     "pyyaml>=5.3.1",
@@ -142,8 +143,8 @@ dependencies = [
     "typing-extensions<5.0.0,>=4.0.0; python_version < \"3.11\"",
 ]
 files = [
-    {file = "copier-9.9.1-py3-none-any.whl", hash = "sha256:9439280baca00194933b04885f1376b17e3287c2324053666fbe9a7a0aceaa44"},
-    {file = "copier-9.9.1.tar.gz", hash = "sha256:244bdf3ec5eb460dbe45ef22b825e9897b0bcc9d94ca96dad3ced3d786cfeab7"},
+    {file = "copier-9.10.1-py3-none-any.whl", hash = "sha256:8b1b406367c67e5ee389778246cea18cddd55e71bfc6503d5fa13fe73304407a"},
+    {file = "copier-9.10.1.tar.gz", hash = "sha256:ba2d729465508da04a62bc9b76eed13d952aa7634a74a69519252fcf8a54d94e"},
 ]
 
 [[package]]
@@ -466,13 +467,13 @@ files = [
 
 [[package]]
 name = "platformdirs"
-version = "4.3.8"
+version = "4.4.0"
 requires_python = ">=3.9"
 summary = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
 groups = ["dev"]
 files = [
-    {file = "platformdirs-4.3.8-py3-none-any.whl", hash = "sha256:ff7059bb7eb1179e2685604f4aaf157cfd9535242bd23742eadc3c13542139b4"},
-    {file = "platformdirs-4.3.8.tar.gz", hash = "sha256:3d512d96e16bcb959a814c9f348431070822a6496326a4be0911c40b5a74c2bc"},
+    {file = "platformdirs-4.4.0-py3-none-any.whl", hash = "sha256:abd01743f24e5287cd7a5db3752faf1a2d65353f38ec26d98e25a6db65958c85"},
+    {file = "platformdirs-4.4.0.tar.gz", hash = "sha256:ca753cf4d81dc309bc67b0ea38fd15dc97bc30ce419a7f58d13eb3bf14c4febf"},
 ]
 
 [[package]]
@@ -811,16 +812,16 @@ files = [
 
 [[package]]
 name = "questionary"
-version = "2.1.0"
-requires_python = ">=3.8"
+version = "2.1.1"
+requires_python = ">=3.9"
 summary = "Python library to build pretty command line user prompts ⭐️"
 groups = ["dev"]
 dependencies = [
     "prompt-toolkit<4.0,>=2.0",
 ]
 files = [
-    {file = "questionary-2.1.0-py3-none-any.whl", hash = "sha256:44174d237b68bc828e4878c763a9ad6790ee61990e0ae72927694ead57bab8ec"},
-    {file = "questionary-2.1.0.tar.gz", hash = "sha256:6302cdd645b19667d8f6e6634774e9538bfcd1aad9be287e743d96cacaf95587"},
+    {file = "questionary-2.1.1-py3-none-any.whl", hash = "sha256:a51af13f345f1cdea62347589fbb6df3b290306ab8930713bfae4d475a7d4a59"},
+    {file = "questionary-2.1.1.tar.gz", hash = "sha256:3d7e980292bb0107abaa79c68dd3eee3c561b83a0f89ae482860b181c8bd412d"},
 ]
 
 [[package]]
