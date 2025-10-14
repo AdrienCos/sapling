@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:3035f5cfbd042ea04c151b0e9950a7de3e1cf0e1987c7a5a519ebc42a7309d8a"
+content_hash = "sha256:c72d139ad12dcf5aecac2efc0e47fc16011ba40623691f85f6998abf17dd9e9e"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.14"
@@ -905,20 +905,19 @@ files = [
 
 [[package]]
 name = "setuptools-scm"
-version = "8.3.1"
+version = "9.2.1"
 requires_python = ">=3.8"
 summary = "the blessed package to manage your versions by scm tags"
 groups = ["dev"]
 dependencies = [
-    "importlib-metadata>=4.6; python_version < \"3.10\"",
     "packaging>=20",
     "setuptools",
     "tomli>=1; python_version < \"3.11\"",
     "typing-extensions; python_version < \"3.10\"",
 ]
 files = [
-    {file = "setuptools_scm-8.3.1-py3-none-any.whl", hash = "sha256:332ca0d43791b818b841213e76b1971b7711a960761c5bea5fc5cdb5196fbce3"},
-    {file = "setuptools_scm-8.3.1.tar.gz", hash = "sha256:3d555e92b75dacd037d32bafdf94f97af51ea29ae8c7b234cf94b7a5bd242a63"},
+    {file = "setuptools_scm-9.2.1-py3-none-any.whl", hash = "sha256:84c9b3f39ffb77ba00dd92a06e025e4f66dc69ab8df1c2a225a0678e76311f8d"},
+    {file = "setuptools_scm-9.2.1.tar.gz", hash = "sha256:2f5b21e45205e47ed3976e58bc29c38f49bb9b6f07c625c7fd2823871694b244"},
 ]
 
 [[package]]
