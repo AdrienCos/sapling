@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:844e69d218d98f1e6192673863da63d699d10e89d344d73528b6936f6c4aa73d"
+content_hash = "sha256:11a3ece2da5e3b31e6dc11c8aa13ec09e897d97bbae0bb31219324f4f7290977"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.14"
@@ -551,13 +551,13 @@ files = [
 
 [[package]]
 name = "pyclean"
-version = "3.1.0"
-requires_python = ">=3.5"
+version = "3.2.0"
+requires_python = ">=3.9"
 summary = "Pure Python cross-platform pyclean. Clean up your Python bytecode."
 groups = ["dev"]
 files = [
-    {file = "pyclean-3.1.0-py3-none-any.whl", hash = "sha256:46652f7416816924cab565cd045d0c341237aced0368a3727d66b5192c16728c"},
-    {file = "pyclean-3.1.0.tar.gz", hash = "sha256:d23fa900558696e08c79401c79f242fe6f7f38fd58ccd035f875a01c5bc7a6fc"},
+    {file = "pyclean-3.2.0-py3-none-any.whl", hash = "sha256:6622535af7aa6132b80373f779e2dd9b6e8cfe7f67457cb6c566b820bd479a6a"},
+    {file = "pyclean-3.2.0.tar.gz", hash = "sha256:256cf317cc58ca64fd94694dd6dfe211366266e3095e0449baa87421d0e2ab39"},
 ]
 
 [[package]]
