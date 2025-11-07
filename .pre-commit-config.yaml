@@ -14,10 +14,10 @@ repos:
       - id: check-merge-conflict
         # Always check, not only during merges
         args: [--assume-in-merge]
-  - repo: https://github.com/hadolint/hadolint
+  - repo: https://github.com/AleksaC/hadolint-py
     rev: v2.14.0
     hooks:
-      - id: hadolint-docker
+      - id: hadolint
   - repo: https://github.com/crate-ci/typos
     rev: v1.39.0
     hooks:
@@ -38,7 +38,7 @@ repos:
       - id: black
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.14.3
+    rev: v0.14.4
     hooks:
       - id: ruff
   - repo: https://github.com/RobertCraigie/pyright-python
