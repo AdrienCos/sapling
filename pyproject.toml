@@ -286,7 +286,7 @@ dev = [
     "pre-commit==4.4.0",
     "pyclean==3.4.0",
     "pyright==1.1.407",
-    "pytest==8.4.2",
+    "pytest==9.0.1",
     "rope==1.14.0",
     "ruff==0.14.5",
     "setuptools-scm==9.2.2",
