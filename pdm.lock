@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:444e755de0657c631f600a5019ac01320a489619775f5d47fc313f5786f2b13e"
+content_hash = "sha256:0cd3c4c403d8c4681a59fbe75b5e777ff00c3c067e4d87448b03c9984da2da95"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.15"
@@ -125,14 +125,13 @@ files = [
 
 [[package]]
 name = "copier"
-version = "9.10.3"
-requires_python = ">=3.9"
+version = "9.11.0"
+requires_python = ">=3.10"
 summary = "A library for rendering project templates."
 groups = ["dev"]
 dependencies = [
     "colorama>=0.4.6",
     "dunamai>=1.7.0",
-    "eval-type-backport<0.3.0,>=0.1.3; python_version < \"3.10\"",
     "funcy>=1.17",
     "jinja2-ansible-filters>=1.3.1",
     "jinja2>=3.1.5",
@@ -147,8 +146,8 @@ dependencies = [
     "typing-extensions<5.0.0,>=4.0.0; python_version < \"3.11\"",
 ]
 files = [
-    {file = "copier-9.10.3-py3-none-any.whl", hash = "sha256:7165239566f68e9e36c148f71e0552bf1e4911eef96bfa7cf33e6a0dbfed3c96"},
-    {file = "copier-9.10.3.tar.gz", hash = "sha256:6e965d8f719678ee3bc5e611ef0d1b182d6b01a3d5385a5f1ba43aaade51caf7"},
+    {file = "copier-9.11.0-py3-none-any.whl", hash = "sha256:628adac090f7b333bb64bf5cab03456b99971a77e4d5b2b979e30b8451cbda9d"},
+    {file = "copier-9.11.0.tar.gz", hash = "sha256:e73d6989fa140b621a5c571984c46122704086a9caa84a6e07699a5234d297ab"},
 ]
 
 [[package]]
