@@ -18,7 +18,7 @@ jobs:
       - name: Build the Python dist
         run: pdm build
       - name: Export the Python dist
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: dist
           path: dist/
@@ -32,7 +32,7 @@ jobs:
       - name: Build the Pex executables
         run: pdm pex-build
       - name: Export the Pex executables
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: pex
           path: dist/
@@ -45,7 +45,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/common
       - name: Download the Python dist
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: dist
           path: dist/
@@ -61,12 +61,12 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Download the Python dist
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: dist
           path: dist/
       - name: Download the Pex executables
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: pex
           path: pex/
