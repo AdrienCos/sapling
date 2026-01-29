@@ -29,18 +29,6 @@
       ]
     },
     {
-      "groupName": "isort",
-      "matchPackageNames": [
-        "/isort/"
-      ]
-    },
-    {
-      "groupName": "black",
-      "matchPackageNames": [
-        "/black/"
-      ]
-    },
-    {
       "groupName": "ruff",
       "matchPackageNames": [
         "/ruff/"

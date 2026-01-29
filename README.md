@@ -4,8 +4,6 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sapling)
 ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/AdrienCos/sapling)
 ![PDM](https://img.shields.io/badge/pdm-managed-blueviolet)
-![Black](https://img.shields.io/badge/code_style-black-000000)
-![Isort](https://img.shields.io/badge/imports-isort-1674b1?labelColor=ef8336)
 ![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)
 [![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
 ![Pre Commit](https://img.shields.io/badge/pre_commit-enabled-brightgreen?logo=pre-commit)
