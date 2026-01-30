@@ -90,8 +90,8 @@ in your `$PATH`. We recommend the use of
 
 `pdm format`
 
-This will run `black` and `isort` on the `src/` and `tests/` directories,
-formatting your code properly.
+This will run `ruff` on the `src/` and `tests/` directories, formatting your
+code properly.
 
 ### ...spellcheck my project?
 
@@ -103,8 +103,8 @@ It will run `typos` on the entire project, and fix any typo it finds.
 
 `pdm lint`
 
-This will call various linters (`black`, `isort`, `ruff`, `pyright`, `typos`), and
-tell you if your code passes them.
+This will call various linters (`ruff`, `pyright`, `typos`), and tell you if your
+code passes them.
 
 ### ...generate test coverage?
 
