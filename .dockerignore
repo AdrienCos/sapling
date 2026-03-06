@@ -1,0 +1,38 @@
+# Virtual environments
+.venv/
+.pdm-plugins/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+*.pex
+
+# Coverage and test results
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dagger
+.dagger/
+
+# Misc
+*.log
+.DS_Store
