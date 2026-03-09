@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:53f0149ccaa385600b486cb873a4d242f68de64fc4ff2204ebedf32bb71c5916"
+content_hash = "sha256:5979878e949be8fccf9891334d6359b72c12b0ed8de6b950845488cbff429bc1"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.15"
@@ -73,7 +73,7 @@ files = [
 
 [[package]]
 name = "copier"
-version = "9.12.0"
+version = "9.13.0"
 requires_python = ">=3.10"
 summary = "A library for rendering project templates."
 groups = ["dev"]
@@ -94,8 +94,8 @@ dependencies = [
     "typing-extensions<5.0.0,>=4.0.0; python_version < \"3.11\"",
 ]
 files = [
-    {file = "copier-9.12.0-py3-none-any.whl", hash = "sha256:a1bc84dfd2a4b85dbe034999026c0e24ca02a6bc1574f45df07fd76d935c2ea9"},
-    {file = "copier-9.12.0.tar.gz", hash = "sha256:87986637205a0443dbf7e5946502e5c71962a559c25f436642a08203cf61ef54"},
+    {file = "copier-9.13.0-py3-none-any.whl", hash = "sha256:3abb37f15aea815f9dc5e48da6166a7eb8cc09d97bd8d06d8e5ee0e4f395bf2a"},
+    {file = "copier-9.13.0.tar.gz", hash = "sha256:5dd6efba8ea3d2d6c05d36574d50087c6b824e55e36146d7369c15f171442134"},
 ]
 
 [[package]]
@@ -474,13 +474,13 @@ files = [
 
 [[package]]
 name = "platformdirs"
-version = "4.9.2"
+version = "4.9.4"
 requires_python = ">=3.10"
 summary = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
 groups = ["dev"]
 files = [
-    {file = "platformdirs-4.9.2-py3-none-any.whl", hash = "sha256:9170634f126f8efdae22fb58ae8a0eaa86f38365bc57897a6c4f781d1f5875bd"},
-    {file = "platformdirs-4.9.2.tar.gz", hash = "sha256:9a33809944b9db043ad67ca0db94b14bf452cc6aeaac46a88ea55b26e2e9d291"},
+    {file = "platformdirs-4.9.4-py3-none-any.whl", hash = "sha256:68a9a4619a666ea6439f2ff250c12a853cd1cbd5158d258bd824a7df6be2f868"},
+    {file = "platformdirs-4.9.4.tar.gz", hash = "sha256:1ec356301b7dc906d83f371c8f487070e99d3ccf9e501686456394622a01a934"},
 ]
 
 [[package]]
