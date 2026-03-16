@@ -1,0 +1,85 @@
+---
+name: PR Check - Nushell
+on:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Nushell
+        uses: hustcer/setup-nu@v3
+        with:
+          version: "*"
+      - name: Lint
+        run: nu ci.nu lint
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Nushell
+        uses: hustcer/setup-nu@v3
+        with:
+          version: "*"
+      - name: Test
+        run: nu ci.nu test
+
+  dist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Nushell
+        uses: hustcer/setup-nu@v3
+        with:
+          version: "*"
+      - name: Build dist
+        run: nu ci.nu dist
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  pex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Nushell
+        uses: hustcer/setup-nu@v3
+        with:
+          version: "*"
+      - name: Build PEX
+        run: nu ci.nu pex
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pex
+          path: dist/
+
+  docker-build:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: ghcr.io/adriencos/sapling:${{ github.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Nushell
+        uses: hustcer/setup-nu@v3
+        with:
+          version: "*"
+      - name: Build Docker image
+        run: nu ci.nu docker-build --tag $IMAGE
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push
+        run: docker push $IMAGE
