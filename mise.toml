@@ -1,0 +1,4 @@
+[tools]
+dagger = "0.20.0"
+python = "3.14"
+uv = "latest"
