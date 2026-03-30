@@ -270,7 +270,7 @@ dev = [
     "pytest==9.0.2",
     "rope==1.14.0",
     "ruff==0.15.8",
-    "setuptools-scm==9.2.2",
+    "setuptools-scm==10.0.5",
     "toml==0.10.2",
     "tox-pdm==0.7.2",
     "tox==4.51.0",
