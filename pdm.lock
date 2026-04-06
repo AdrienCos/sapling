@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:4123d33b2d6284255a814b705d672c00b3b5d8065d1144a362a6ecf97990a79a"
+content_hash = "sha256:88824d6448ea3eec555251e4d97300e65a8e0d4cb0926c75e1a80dcf4b6f6043"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.15"
@@ -73,7 +73,7 @@ files = [
 
 [[package]]
 name = "copier"
-version = "9.14.0"
+version = "9.14.1"
 requires_python = ">=3.10"
 summary = "A library for rendering project templates."
 groups = ["dev"]
@@ -94,8 +94,8 @@ dependencies = [
     "typing-extensions<5.0.0,>=4.0.0; python_version < \"3.11\"",
 ]
 files = [
-    {file = "copier-9.14.0-py3-none-any.whl", hash = "sha256:e12a18cfef22e67254e5229f0b4bdab85e1e3e82926e448226be0b70d0f4de53"},
-    {file = "copier-9.14.0.tar.gz", hash = "sha256:4d1b6a19538a5d170f913afb7682fe745c74b35c84085890809cb8d8d4d8fe7a"},
+    {file = "copier-9.14.1-py3-none-any.whl", hash = "sha256:cec88ca48b653fc251660e7787bca893ede719d265f3e50281f4d54badb404b5"},
+    {file = "copier-9.14.1.tar.gz", hash = "sha256:98178638db62807a2d22aac851ab9c09ceaee3054884a693ca9d214c6739efe7"},
 ]
 
 [[package]]
@@ -225,7 +225,7 @@ files = [
 
 [[package]]
 name = "dunamai"
-version = "1.26.0"
+version = "1.26.1"
 requires_python = ">=3.5"
 summary = "Dynamic version generation"
 groups = ["dev"]
@@ -234,8 +234,8 @@ dependencies = [
     "packaging>=20.9",
 ]
 files = [
-    {file = "dunamai-1.26.0-py3-none-any.whl", hash = "sha256:f584edf0fda0d308cce0961f807bc90a8fe3d9ff4d62f94e72eca7b43f0ed5f6"},
-    {file = "dunamai-1.26.0.tar.gz", hash = "sha256:5396ac43aa20ed059040034e9f9798c7464cf4334c6fc3da3732e29273a2f97d"},
+    {file = "dunamai-1.26.1-py3-none-any.whl", hash = "sha256:2727d939c5b4257cb01ea404372803b477f5176e5a347c43beaf89cd5072e853"},
+    {file = "dunamai-1.26.1.tar.gz", hash = "sha256:3b46007bd65b00b4824ead0a1aee365fd22d0ec2b9c219497d4fd48f52860c8b"},
 ]
 
 [[package]]
