@@ -263,7 +263,7 @@ template-update = { cmd = [
 dev = [
     "copier==9.14.1",
     "coverage==7.13.5",
-    "pex==2.91.5",
+    "pex==2.92.0",
     "pre-commit==4.5.1",
     "pyclean==3.5.0",
     "pyright==1.1.408",
