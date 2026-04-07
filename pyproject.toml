@@ -1,28 +1,23 @@
-[build-system]
-requires = ["setuptools>=73", "wheel"]
-build-backend = "setuptools.build_meta"
 
 [project]
 name = "adriencos_sapling"
 authors = [{ name = "Adrien Cosson", email = "adrien@cosson.io" }]
 description = "Sapling"
 readme = "README.md"
-requires-python = ">=3.10,<3.15"
+requires-python = ">=3.14,<3.15"
 license = { text = "MIT" }
 keywords = []
 version = "2.0.0"
 classifiers = [
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
-    "License :: OSI Approved :: MIT License",
 ]
 dependencies = ["Click==8.3.2", "loguru==0.7.3"]
 
+[build-system]
+requires = ["uv_build>=0.11.2,<0.12.0"]
+build-backend = "uv_build"
 
 [project.urls]
 Homepage = "https://github.com/AdrienCos/sapling"
@@ -33,24 +28,15 @@ Issues = "https://github.com/AdrienCos/sapling/issues"
 [project.scripts]
 adriencos_sapling = "adriencos_sapling.cli:main"
 
-[tool.pyright]
-include = ["src", "tests"]
-pythonVersion = "3.14"
-pythonPlatform = "Linux"
-typeCheckingMode = "strict"
-venvPath = "."
-venv = ".venv"
-
 [tool.coverage.run]
 branch = true
 source = ["adriencos_sapling"]
 parallel = true
 
 [tool.coverage.paths]
-source = ["src/", ".tox/**/site-packages"]
+source = ["src/"]
 
 [tool.ruff]
-extend-exclude = ["setup.py"]
 line-length = 100
 
 [tool.ruff.lint]
@@ -90,189 +76,16 @@ docstring-code-format = true
 [tool.typos.default]
 extend-ignore-re = ["_commit:.*"]
 
-[tool.pdm.scripts]
-# Internal helper scripts
-_ruff_format = { cmd = [
-    "ruff",
-    "format",
-    "./src",
-    "tests/",
-], help = "Format the code" }
-_ruff_format_check = { cmd = [
-    "ruff",
-    "format",
-    "--check",
-    "./src",
-    "tests/",
-], help = "Check the formatting of the code" }
-_ruff_check = { cmd = [
-    "ruff",
-    # Do not actually fix the code
-    "check",
-    "./src",
-    "tests/",
-], help = "Check the overall code" }
-_pyright_check = { cmd = [
-    "pyright",
-    "--warnings",
-], help = "Check the typing of the code" }
-_typos_check = { cmd = [
-    "typos",
-    ".",
-], help = "Check the project for any typography" }
-_typos_fix = { cmd = [
-    "typos",
-    "--write-changes",
-    ".",
-], help = "Fix any typo found in the project" }
-_lockfile_check = { cmd = [
-    "pdm",
-    "lock",
-    "--check",
-], help = "Check that the lockfile is up-to-date" }
-_pytest = { cmd = ["pytest"], help = "Run the test suite" }
-_coverage_run = { cmd = [
-    "coverage",
-    "run",
-    "-m",
-    "pytest",
-], help = "Run the test suite and collect the coverage data" }
-_coverage_combine = { cmd = [
-    "coverage",
-    "combine",
-], help = "Combine all the generated test reports" }
-_coverage_report = { cmd = [
-    "coverage",
-    "report",
-], help = "Generate a coverage report" }
-_coverage_xml = { cmd = [
-    "coverage",
-    "xml",
-], help = "Export an XML coverage report" }
-_coverage_html = { cmd = [
-    "coverage",
-    "html",
-], help = "Export an HTML coverage report" }
-_precommit_install = { cmd = [
-    "pre-commit",
-    "install",
-], help = "Install the pre-cmmit hooks" }
-_precommit_update = { cmd = [
-    "pre-commit",
-    "autoupdate",
-], help = "Update the pre-commit hooks to their latest version" }
-_packages_install = { cmd = [
-    "pdm",
-    "install",
-], help = "Install the package's prod and dev dependencies" }
-_dev_packages_update = { cmd = [
-    "pdm",
-    "update",
-    # Do not touch the prod packages
-    "--no-default",
-    # Only touch the dev packages
-    "--dev",
-], help = "Update the dev packages to their latest version" }
-_generate_requirements = { cmd = [
-    "pdm",
-    "export",
-    "--format",
-    "requirements",
-    "--prod",
-    "--output",
-    "requirements.txt",
-], help = "Generate a requirements file for the runtime dependencies" }
-_generate_requirements_no_hashes = { cmd = [
-    "pdm",
-    "export",
-    "--format",
-    "requirements",
-    "--prod",
-    "--without-hashes",
-    "--output",
-    "requirements.txt",
-], help = "Generate a requirements file for the runtime dependencies" }
-_build_pex = { cmd = [
-    "python",
-    "setup.py",
-    "bdist_pex",
-    "--bdist-all",
-    "--pex-args",
-    "--requirement=requirements.txt",
-], help = "Build a PEX file of the package" }
-_build_wheel = { cmd = [
-    "pdm",
-    "build",
-    "--no-sdist",
-], help = "Only build the .whl package" }
-
-# Public scripts
-format = { composite = [
-    "_ruff_format",
-], help = "Format the codebase" }
-spell = { composite = [
-    "_typos_fix",
-], help = "Fix the spelling mistakes found in the project" }
-lint = { composite = [
-    "_ruff_format_check",
-    "_ruff_check",
-    "_pyright_check",
-    "_typos_check",
-    "_lockfile_check",
-], help = "Lint the codebase" }
-test = { composite = ["_pytest"], help = "Run the test suite" }
-coverage = { composite = [
-    "_coverage_run",
-    "_coverage_combine",
-    "_coverage_report",
-    "_coverage_xml",
-    "_coverage_html",
-], help = "Measure and report the coverage of the test suite" }
-help = { cmd = "pdm run --list", help = "Print the list of existing commands" }
-setup = { composite = [
-    "_packages_install",
-    "_precommit_install",
-], help = "Install and configure the development environment" }
-dev-update = { composite = [
-    "_precommit_update",
-    "_dev_packages_update",
-], help = "Update the development dependencies and tools" }
-clean = { cmd = [
-    "pyclean",
-    "--debris",
-    "all",
-    "--",
-    ".",
-], help = "Remove all the build artifacts, caches, and other debris" }
-docker-build = { shell = "docker build -t adriencos_sapling:dev -t adriencos_sapling:$(pdm show --version) .", help = "Build a Docker image of the application" }
-pex-build = { composite = [
-    "_generate_requirements_no_hashes",
-    "_build_pex",
-], help = "Build a (reproducible) PEX executable of each entrypoint of the application" }
-cross-test = { cmd = [
-    "tox",
-    "run-parallel",
-], help = "Run the test suite against multiple Python versions" }
-template-update = { cmd = [
-    "copier",
-    "update",
-    '--skip-answered',
-], help = "Update the project to the latest version of the template" }
-
-[tool.pdm.dev-dependencies]
+[dependency-groups]
 dev = [
     "copier==9.14.1",
     "coverage==7.13.5",
-    "pex==2.92.0",
     "pre-commit==4.5.1",
     "pyclean==3.6.0",
-    "pyright==1.1.408",
     "pytest==9.0.2",
     "rope==1.14.0",
     "ruff==0.15.9",
-    "setuptools-scm==10.0.5",
     "toml==0.10.2",
-    "tox-pdm==0.7.2",
-    "tox==4.52.0",
+    "ty==0.0.29",
     "typos==1.45.0",
 ]
