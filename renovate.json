@@ -35,15 +35,15 @@
       ]
     },
     {
-      "groupName": "pyright",
+      "groupName": "ty",
       "matchPackageNames": [
-        "/pyright/"
+        "/ty/"
       ]
     },
     {
-      "groupName": "pdm",
+      "groupName": "uv",
       "matchPackageNames": [
-        "/pdm/"
+        "/uv/"
       ]
     },
     {
@@ -54,19 +54,6 @@
         "digest"
       ],
       "automerge": true
-    }
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/^Dockerfile$/"
-      ],
-      "matchStrings": [
-        "ARG PDM_VERSION=(?<currentValue>.*?)\\n"
-      ],
-      "depNameTemplate": "pdm",
-      "datasourceTemplate": "pypi"
     }
   ]
 }

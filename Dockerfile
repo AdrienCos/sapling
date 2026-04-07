@@ -1,41 +1,35 @@
-ARG PYTHON_VERSION=3.14.3-slim
-ARG PDM_VERSION=2.26.7
+ARG PYTHON_VERSION=3.14.3
+# renovate: datasource=pypi depName=uv
+ARG UV_VERSION=0.10.8
 
-FROM python:${PYTHON_VERSION}@sha256:fb83750094b46fd6b8adaa80f66e2302ecbe45d513f6cece637a841e1025b4ca as base
+FROM ghcr.io/astral-sh/uv:${UV_VERSION}-debian-slim AS builder
+ENV UV_COMPILE_BYTECODE=1
+ENV UV_NO_DEV=1
+ENV UV_PYTHON_INSTALL_DIR=/python
+ENV UV_PYTHON_PREFERENCE=only-managed
+ARG PYTHON_VERSION
+RUN uv python install ${PYTHON_VERSION}
+WORKDIR /app
+RUN --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --locked --no-install-project
+COPY ./src /app/src
+COPY README.md /app
+RUN --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --locked
+
+FROM debian:bookworm-slim AS final
 RUN addgroup --system abc && \
     adduser \
     --shell /bin/sh \
     --ingroup abc \
     --disabled-password \
     abc
-USER abc
-ENV PATH="/home/abc/.local/bin:${PATH}"
 WORKDIR /app
-
-
-FROM base as base-pdm
-ARG PDM_VERSION
-RUN pip install --user --no-cache-dir pdm==${PDM_VERSION}
-COPY --chown=abc:abc ./pyproject.toml /app/
-COPY --chown=abc:abc ./pdm.lock /app/
-
-
-
-FROM base-pdm as package-builder
-COPY --chown=abc:abc ./src /app/src
-RUN pdm build --no-sdist
-
-
-
-FROM base-pdm as dependencies-installer
-RUN pdm sync --production --no-self
-
-
-
-FROM base as final
 ENV PATH="/app/.venv/bin:${PATH}"
-COPY --from=dependencies-installer /app/.venv/ /app/.venv/
-COPY --from=package-builder /app/dist/adriencos_sapling*.whl /app/
-RUN pip --python "$(which python)" install --no-cache-dir --no-deps ./adriencos_sapling*.whl
+COPY --from=builder /python /python
+COPY --from=builder --chown=abc:abc /app /app
+USER abc
 
 ENTRYPOINT [ "adriencos_sapling" ]

@@ -3,9 +3,9 @@
 ![GitHub](https://img.shields.io/github/license/AdrienCos/sapling)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sapling)
 ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/AdrienCos/sapling)
-![PDM](https://img.shields.io/badge/pdm-managed-blueviolet)
+![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)
 ![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)
-[![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
+[![Checked with ty](https://img.shields.io/badge/ty-checked-blue)](https://github.com/astral-sh/ty)
 ![Pre Commit](https://img.shields.io/badge/pre_commit-enabled-brightgreen?logo=pre-commit)
 
 A Python project based on the Seedlings template
@@ -13,7 +13,6 @@ A Python project based on the Seedlings template
 - [Usage](#usage)
 - [Installation](#installation)
   - [With `pipx`](#with-pipx)
-  - [With a `.pex` executable](#with-a-pex-executable)
   - [With `pip`, from a release version](#with-pip-from-a-release-version)
   - [With `pip`, from sources](#with-pip-from-sources)
 - [Development Quickstart](#development-quickstart)
@@ -59,17 +58,6 @@ pipx install adriencos_sapling-${VERSION}.tar.gz
 ```
 
 where `$VERSION` is the version of the package you downloaded.
-
-### With a `.pex` executable
-
-[`pex`](https://pex.readthedocs.io/en/latest/) is an executable Python
-virtualenv format, that can be executed on any machine that provides a suitable
-Python interpreter.
-
-To install the CLI provided by `adriencos_sapling`, download the `.pex` files
-of the latest release, and copy them somewhere in your `$PATH` (on Linux,
-`~/.local/bin` is often a good idea). The executables will then be available in
-your shell.
 
 ### With `pip`, from a release version
 
