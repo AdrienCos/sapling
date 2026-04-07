@@ -18,20 +18,13 @@ repos:
     rev: v2.14.0
     hooks:
       - id: hadolint
-  - repo: https://github.com/crate-ci/typos
-    rev: v1.45.0
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.11.2
     hooks:
-      - id: typos
-        # Disable auto-fix
-        args: []
+      - id: uv-lock
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.15.9
+    rev: v0.14.14
     hooks:
       - id: ruff-format
       - id: ruff
-  - repo: https://github.com/astral-sh/uv-pre-commit
-    # uv version.
-    rev: 0.11.3
-    hooks:
-      - id: uv-lock

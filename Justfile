@@ -4,23 +4,18 @@
 format:
     uv run ruff format ./src tests/
 
-# Fix the spelling mistakes found in the project
-spell:
-    uv run typos --write-changes .
-
-# Lint the codebase
+# Run all linters
 lint:
     uv run ruff format --check ./src tests/
     uv run ruff check ./src tests/
-    uv run ty check
-    uv run typos .
+    uv run ty check src tests
     uv lock --check
 
 # Run the test suite
 test:
     uv run pytest
 
-# Measure and report the coverage of the test suite
+# Run tests and generate coverage reports
 coverage:
     uv run coverage run -m pytest
     uv run coverage combine
@@ -38,22 +33,23 @@ setup:
     uv sync
     uv run pre-commit install
 
-# Update the development dependencies and tools
+# Update pre-commit hooks and uv lock
 dev-update:
     uv run pre-commit autoupdate
     uv lock --upgrade
 
-# Remove all the build artifacts, caches, and other debris
+# Remove build artifacts, caches, and other debris
 clean:
     uv run pyclean --debris all -- .
 
 # Build a Docker image of the application
 docker-build:
-    docker build -t adriencos_sapling:dev -t adriencos_sapling:$(uv run python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])") .
+    docker build -t adriencos_sapling:dev -t adriencos_sapling:$(uv run python -c "import toml; print(toml.load('pyproject.toml')['project']['version'])") .
 
 # Update the project to the latest version of the template
 template-update:
     uv run copier update --skip-answered
 
+# Build distribution packages
 build:
     uv build
