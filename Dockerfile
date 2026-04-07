@@ -1,6 +1,6 @@
 ARG PYTHON_VERSION=3.14.3
 # renovate: datasource=pypi depName=uv
-ARG UV_VERSION=0.10.8
+ARG UV_VERSION=0.11.2
 
 FROM ghcr.io/astral-sh/uv:${UV_VERSION}-debian-slim AS builder
 ENV UV_COMPILE_BYTECODE=1

@@ -23,12 +23,6 @@
   },
   "packageRules": [
     {
-      "groupName": "typos",
-      "matchPackageNames": [
-        "/typos/"
-      ]
-    },
-    {
       "groupName": "ruff",
       "matchPackageNames": [
         "/ruff/"
