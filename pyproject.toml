@@ -12,7 +12,7 @@ classifiers = [
 ]
 keywords = []
 version = "3.0.0"
-dependencies = ["Click==8.3.2", "loguru==0.7.3"]
+dependencies = ["Click==8.3.3", "loguru==0.7.3"]
 
 [build-system]
 requires = ["uv_build>=0.11.2,<0.12.0"]
