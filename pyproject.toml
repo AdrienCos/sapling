@@ -76,7 +76,7 @@ known-first-party = ["adriencos_sapling"]
 dev = [
     "copier==9.14.3",
     "coverage==7.13.5",
-    "pre-commit==4.5.1",
+    "pre-commit==4.6.0",
     "pyclean==3.6.0",
     "pytest==9.0.3",
     "rope==1.14.0",
