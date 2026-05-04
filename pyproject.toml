@@ -74,7 +74,7 @@ known-first-party = ["adriencos_sapling"]
 
 [dependency-groups]
 dev = [
-    "copier==9.14.3",
+    "copier==9.15.0",
     "coverage==7.13.5",
     "pre-commit==4.6.0",
     "pyclean==3.6.0",
