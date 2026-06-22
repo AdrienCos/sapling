@@ -78,7 +78,7 @@ dev = [
     "coverage==7.14.2",
     "pre-commit==4.6.0",
     "pyclean==3.7.0",
-    "pytest==9.1.0",
+    "pytest==9.1.1",
     "rope==1.14.0",
     "ruff==0.15.17",
     "toml==0.10.2",
